@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Calculator</string>
+
+    <string name="hint_etInput">Enter expression</string>
+
+    <string name="toast_stringIndexOutOfBoundsEx">You need to complete expression</string>
+    <string name="toast_NumberFormatException">Enter a valid format of expression</string>
 </resources>
