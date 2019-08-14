@@ -12,7 +12,7 @@ import android.view.Gravity;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
     TextView textView;
     EditText editText;
@@ -27,6 +27,55 @@ public class MainActivity extends AppCompatActivity
         textView = findViewById(R.id.tvResult);
         editText = findViewById(R.id.etInput);
         button = findViewById(R.id.btnClear);
+
+        findViewById(R.id.btn0).setOnClickListener(this);
+        findViewById(R.id.btn1).setOnClickListener(this);
+        findViewById(R.id.btn2).setOnClickListener(this);
+        findViewById(R.id.btn3).setOnClickListener(this);
+        findViewById(R.id.btn4).setOnClickListener(this);
+        findViewById(R.id.btn5).setOnClickListener(this);
+        findViewById(R.id.btn6).setOnClickListener(this);
+        findViewById(R.id.btn7).setOnClickListener(this);
+        findViewById(R.id.btn8).setOnClickListener(this);
+        findViewById(R.id.btn9).setOnClickListener(this);
+        findViewById(R.id.btnPoint).setOnClickListener(this);
+        findViewById(R.id.btnEquals).setOnClickListener(this);
+        findViewById(R.id.btnPlus).setOnClickListener(this);
+        findViewById(R.id.btnMinus).setOnClickListener(this);
+        findViewById(R.id.btnDivide).setOnClickListener(this);
+        findViewById(R.id.btnMultiply).setOnClickListener(this);
+        findViewById(R.id.btnClear).setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view)
+    {
+        switch (view.getId())
+        {
+            case R.id.btn0:
+            case R.id.btn1:
+            case R.id.btn2:
+            case R.id.btn3:
+            case R.id.btn4:
+            case R.id.btn5:
+            case R.id.btn6:
+            case R.id.btn7:
+            case R.id.btn8:
+            case R.id.btn9:
+            case R.id.btnPoint:
+            case R.id.btnPlus:
+            case R.id.btnMinus:
+            case R.id.btnDivide:
+            case R.id.btnMultiply:
+                enterChar(view);
+                break;
+            case R.id.btnClear:
+                deleteChar();
+                break;
+            case R.id.btnEquals:
+                calculate();
+                break;
+        }
     }
 
     public void enterChar(View view)
@@ -37,7 +86,7 @@ public class MainActivity extends AppCompatActivity
         editText.setSelection(++cursorPosition);
     }
 
-    public void calculate(View view)
+    public void calculate()
     {
         String expression = editText.getText().toString().replaceAll("[^\\d.+-\\/*]", "");
         editText.setText(expression);
@@ -73,11 +122,11 @@ public class MainActivity extends AppCompatActivity
         }
         catch (NumberFormatException ex)
         {
-            showToast(getResources().getString(R.string.toast_stringIndexOutOfBoundsEx));
+            showToast(getResources().getString(R.string.toast_NumberFormatException));
         }
     }
 
-    public void delete(View view)
+    public void deleteChar()
     {
         int cursorPosition = editText.getSelectionEnd();
         String expression = editText.getText().toString();

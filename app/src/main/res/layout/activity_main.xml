@@ -28,104 +28,107 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="7"
-                android:onClick="enterChar"/>
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="8"
-                android:onClick="enterChar"/>
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="9"
-                android:onClick="enterChar"/>
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="/"
-                android:onClick="enterChar"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="4"
-                android:onClick="enterChar"/>
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="5"
-                android:onClick="enterChar"/>
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="6"
-                android:onClick="enterChar"/>
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="*"
-                android:onClick="enterChar"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="1"
-                android:onClick="enterChar"/>
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="2"
-                android:onClick="enterChar"/>
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="3"
-                android:onClick="enterChar"/>
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="-"
-                android:onClick="enterChar"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="0"
-                android:onClick="enterChar"/>
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="."
-                android:onClick="enterChar"/>
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="+"
-                android:onClick="enterChar"/>
-            <Button
-                style="@style/calculatorButtonStyle"
-                android:text="="
-                android:onClick="calculate"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <LinearLayout
+            <Button android:id="@+id/btn7"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".50">
-            </LinearLayout>
-
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="7"/>
+            <Button android:id="@+id/btn8"
+                android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="8"/>
+            <Button android:id="@+id/btn9"
+                android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="9"/>
+            <Button android:id="@+id/btnDivide"
+                android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="/"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btn4"
+                android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="4"/>
+            <Button android:id="@+id/btn5"
+                android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="5"/>
+            <Button android:id="@+id/btn6"
+                android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="6"/>
+            <Button android:id="@+id/btnMultiply"
+                android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="*"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btn1"
+                android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="1"/>
+            <Button android:id="@+id/btn2"
+                android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="2"/>
+            <Button android:id="@+id/btn3"
+                android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="3"/>
+            <Button android:id="@+id/btnMinus"
+                android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="-"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btn0"
+                android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="0"/>
+            <Button android:id="@+id/btnPoint"
+                android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="."/>
+            <Button android:id="@+id/btnPlus"
+                android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+                android:text="+"/>
             <Button android:id="@+id/btnClear"
                 android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_weight=".50"
-                android:text="C"
-                android:onClick="delete" />
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="C"/>
         </LinearLayout>
+        <Button android:id="@+id/btnEquals"
+            style="@style/btnEqualsStyle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="end"
+            android:text="="/>
     </LinearLayout>
 </LinearLayout>

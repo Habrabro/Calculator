@@ -7,16 +7,18 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="buttonStyle">@style/buttonStyle</item>
+        <item name="android:background">#F9C97B</item>
     </style>
 
     <style name="buttonStyle" parent="Widget.AppCompat.Button">
-
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#0000FF</item>
+        <item name="android:background">@drawable/button</item>
     </style>
 
-    <style name="calculatorButtonStyle">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:layout_height">60dp</item>
+    <style name="btnEqualsStyle">
+        <item name="android:background">@drawable/equals_button</item>
     </style>
 
 </resources>
