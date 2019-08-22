@@ -17,7 +17,7 @@
         <item name="android:background">@drawable/button</item>
     </style>
 
-    <style name="btnEqualsStyle">
+    <style name="buttonRoundedStyle">
         <item name="android:background">@drawable/equals_button</item>
     </style>
 
